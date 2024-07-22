@@ -13,6 +13,10 @@ namespace snake
 {
     public partial class Form2 : Form
     {
+        public int count1 = 0;
+        public int count2 = 0;
+        public int count3 = 0;
+        public int count4 = 0;
         private PictureBox Fruit;
         private PictureBox[] snake = new PictureBox[400];
         private Label LabelScore;
@@ -107,34 +111,42 @@ namespace snake
         }
         private void CheckBorders()
         {
-            if (snake[0].Location.X < 0)
+            if (snake[count1].Location.X < 0 && count1 - 1 <= score)
             {
-                for (int i = 0; i <= score; i++)
+                snake[count1].Location = new Point(FieldDimensions.width - 140, snake[0].Location.Y);
+                if (count1 == snake.Length)
                 {
-                    snake[i].Location = new Point(FieldDimensions.width - 100, snake[0].Location.Y);
+                    count1 += 1;
                 }
             }
-            if (snake[0].Location.X > FieldDimensions.width - 100)
+            else { count1 = 0; }
+            if (snake[count2].Location.X > FieldDimensions.width - 140 && count2 - 1 <= score)
             {
-                for (int i = 0; i <= score; i++)
+                snake[count2].Location = new Point(0, snake[0].Location.Y);
+                if (count2 == snake.Length)
                 {
-                    snake[i].Location = new Point(0, snake[0].Location.Y);
+                    count2 += 1;
                 }
             }
-            if (snake[0].Location.Y < 0)
+            else { count2 = 0; }
+            if (snake[count3].Location.Y < 0 && count3 - 1 <= score)
             {
-                for (int i = 0; i <= score; i++)
+                snake[count3].Location = new Point(snake[0].Location.X, FieldDimensions.height);
+                if (count3 == snake.Length)
                 {
-                    snake[i].Location = new Point(snake[0].Location.X, FieldDimensions.height);
+                    count3 += 1;
                 }
             }
-            if (snake[0].Location.Y > FieldDimensions.height)
+            else { count3 = 0; }
+            if (snake[count4].Location.Y > FieldDimensions.height && count4 - 1 <= score)
             {
-                for (int i = 0; i <= score; i++)
+                snake[count4].Location = new Point(snake[0].Location.X, 0);
+                if (count4 == snake.Length)
                 {
-                    snake[i].Location = new Point(snake[0].Location.X, 0);
+                    count4 += 1;
                 }
             }
+            else { count4 = 0; }
         }
         private void Update(object sender, EventArgs e)
         {
