@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             cube = new PictureBox();
+            timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)cube).BeginInit();
             SuspendLayout();
             // 
             // cube
             // 
-            cube.BackColor = SystemColors.ActiveBorder;
-            cube.Location = new Point(288, 98);
+            cube.BackColor = SystemColors.Highlight;
+            cube.Location = new Point(0, 0);
             cube.Name = "cube";
             cube.Size = new Size(40, 40);
             cube.TabIndex = 0;
@@ -57,5 +59,6 @@
         #endregion
 
         private PictureBox cube;
+        private System.Windows.Forms.Timer timer;
     }
 }

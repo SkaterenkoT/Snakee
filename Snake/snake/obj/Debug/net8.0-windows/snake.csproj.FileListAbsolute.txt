@@ -16,3 +16,4 @@ C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\refint\snake.dll
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.pdb
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.genruntimeconfig.cache
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\ref\snake.dll
+C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.Properties.Resources.resources

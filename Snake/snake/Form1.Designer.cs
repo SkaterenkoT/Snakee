@@ -30,18 +30,19 @@
         {
             Startbtn = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             label2 = new Label();
-            label3 = new Label();
+            button1 = new Button();
+            pictureBox1 = new PictureBox();
+            DimensionsBox = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // Startbtn
             // 
-            Startbtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            Startbtn.Location = new Point(295, 128);
+            Startbtn.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            Startbtn.Location = new Point(76, 226);
             Startbtn.Name = "Startbtn";
-            Startbtn.Size = new Size(156, 90);
+            Startbtn.Size = new Size(156, 61);
             Startbtn.TabIndex = 0;
             Startbtn.Text = "Start game";
             Startbtn.UseVisualStyleBackColor = true;
@@ -50,57 +51,63 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(457, 128);
+            label1.Location = new Point(238, 239);
             label1.Name = "label1";
             label1.Size = new Size(146, 20);
             label1.TabIndex = 1;
             label1.Text = "Set field dimensions:";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(517, 158);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(517, 191);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 3;
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(457, 161);
+            label2.Location = new Point(288, 267);
             label2.Name = "label2";
-            label2.Size = new Size(54, 20);
+            label2.Size = new Size(109, 20);
             label2.TabIndex = 4;
-            label2.Text = "Length";
+            label2.Text = "Height x Width";
             // 
-            // label3
+            // button1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(462, 195);
-            label3.Name = "label3";
-            label3.Size = new Size(49, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Width";
+            button1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            button1.Location = new Point(76, 293);
+            button1.Name = "button1";
+            button1.Size = new Size(156, 66);
+            button1.TabIndex = 6;
+            button1.Text = "Exit";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Snake_free_icons_designed_by_Freepik;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(516, 498);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
+            // DimensionsBox
+            // 
+            DimensionsBox.FormattingEnabled = true;
+            DimensionsBox.Items.AddRange(new object[] { "1000x1100", "800x900", "600x700", "400x500" });
+            DimensionsBox.Location = new Point(268, 290);
+            DimensionsBox.Name = "DimensionsBox";
+            DimensionsBox.Size = new Size(151, 28);
+            DimensionsBox.TabIndex = 8;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label3);
+            ClientSize = new Size(513, 498);
+            Controls.Add(DimensionsBox);
+            Controls.Add(button1);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(Startbtn);
+            Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -109,9 +116,9 @@
 
         private Button Startbtn;
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
         private Label label2;
-        private Label label3;
+        private Button button1;
+        private PictureBox pictureBox1;
+        private ComboBox DimensionsBox;
     }
 }
