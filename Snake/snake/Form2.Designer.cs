@@ -29,36 +29,35 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            cube = new PictureBox();
             timer = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)cube).BeginInit();
+            Refreshbtn = new Button();
             SuspendLayout();
             // 
-            // cube
+            // Refreshbtn
             // 
-            cube.BackColor = SystemColors.Highlight;
-            cube.Location = new Point(0, 0);
-            cube.Name = "cube";
-            cube.Size = new Size(40, 40);
-            cube.TabIndex = 0;
-            cube.TabStop = false;
+            Refreshbtn.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            Refreshbtn.Location = new Point(292, 179);
+            Refreshbtn.Name = "Refreshbtn";
+            Refreshbtn.Size = new Size(121, 65);
+            Refreshbtn.TabIndex = 0;
+            Refreshbtn.Text = "Restart";
+            Refreshbtn.UseVisualStyleBackColor = true;
+            Refreshbtn.Click += Refreshbtn_Click;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(cube);
+            Controls.Add(Refreshbtn);
             KeyPreview = true;
             Name = "Form2";
             Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)cube).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private PictureBox cube;
         private System.Windows.Forms.Timer timer;
+        private Button Refreshbtn;
     }
 }
