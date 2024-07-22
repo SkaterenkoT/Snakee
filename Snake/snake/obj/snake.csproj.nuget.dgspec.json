@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Админ\\source\\repos\\snake\\snake\\snake.csproj": {}
+    "C:\\Users\\Админ\\Snakee\\Snake\\snake\\snake.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Админ\\source\\repos\\snake\\snake\\snake.csproj": {
+    "C:\\Users\\Админ\\Snakee\\Snake\\snake\\snake.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Админ\\source\\repos\\snake\\snake\\snake.csproj",
+        "projectUniqueName": "C:\\Users\\Админ\\Snakee\\Snake\\snake\\snake.csproj",
         "projectName": "snake",
-        "projectPath": "C:\\Users\\Админ\\source\\repos\\snake\\snake\\snake.csproj",
+        "projectPath": "C:\\Users\\Админ\\Snakee\\Snake\\snake\\snake.csproj",
         "packagesPath": "C:\\Users\\Админ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Админ\\source\\repos\\snake\\snake\\obj\\",
+        "outputPath": "C:\\Users\\Админ\\Snakee\\Snake\\snake\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Админ\\AppData\\Roaming\\NuGet\\NuGet.Config",
