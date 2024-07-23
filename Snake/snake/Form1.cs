@@ -27,6 +27,22 @@ namespace snake
                     FieldDimensions.height = 400;
                     FieldDimensions.width = 500;
                     break;
+                default:
+                    break;
+            }
+            switch (DiffBox.Text)
+            {
+                case "Easy":
+                    Dif.difficulty = 250;
+                    break;
+                case "Normal":
+                    Dif.difficulty = 100;
+                    break;
+                case "Hard":
+                    Dif.difficulty = 40;
+                    break;
+                default:
+                    break;
             }
             this.Hide();
             Form2 form2 = new Form2();
@@ -36,6 +52,10 @@ namespace snake
         {
             static public int height = 800;
             static public int width = 900;
+        }
+        static public class Dif
+        {
+            static public int difficulty = 100;
         }
 
         private void button1_Click(object sender, EventArgs e)

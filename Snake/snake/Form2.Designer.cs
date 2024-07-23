@@ -36,7 +36,7 @@
             // Refreshbtn
             // 
             Refreshbtn.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            Refreshbtn.Location = new Point(292, 179);
+            Refreshbtn.Location = new Point(302, 180);
             Refreshbtn.Name = "Refreshbtn";
             Refreshbtn.Size = new Size(121, 65);
             Refreshbtn.TabIndex = 0;

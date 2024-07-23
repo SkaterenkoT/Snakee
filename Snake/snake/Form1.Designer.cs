@@ -34,6 +34,7 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             DimensionsBox = new ComboBox();
+            DiffBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -60,11 +61,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(288, 267);
+            label2.Location = new Point(238, 293);
             label2.Name = "label2";
-            label2.Size = new Size(109, 20);
+            label2.Size = new Size(95, 20);
             label2.TabIndex = 4;
-            label2.Text = "Height x Width";
+            label2.Text = "Set difficulty:";
             // 
             // button1
             // 
@@ -82,7 +83,7 @@
             pictureBox1.Image = Properties.Resources.Snake_free_icons_designed_by_Freepik;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(516, 498);
+            pictureBox1.Size = new Size(513, 498);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
@@ -90,16 +91,26 @@
             // 
             DimensionsBox.FormattingEnabled = true;
             DimensionsBox.Items.AddRange(new object[] { "1000x1100", "800x900", "600x700", "400x500" });
-            DimensionsBox.Location = new Point(268, 290);
+            DimensionsBox.Location = new Point(261, 262);
             DimensionsBox.Name = "DimensionsBox";
             DimensionsBox.Size = new Size(151, 28);
             DimensionsBox.TabIndex = 8;
+            // 
+            // DiffBox
+            // 
+            DiffBox.FormattingEnabled = true;
+            DiffBox.Items.AddRange(new object[] { "Easy", "Normal", "Hard" });
+            DiffBox.Location = new Point(261, 316);
+            DiffBox.Name = "DiffBox";
+            DiffBox.Size = new Size(151, 28);
+            DiffBox.TabIndex = 9;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(513, 498);
+            Controls.Add(DiffBox);
             Controls.Add(DimensionsBox);
             Controls.Add(button1);
             Controls.Add(label2);
@@ -121,5 +132,6 @@
         private Button button1;
         private PictureBox pictureBox1;
         private ComboBox DimensionsBox;
+        private ComboBox DiffBox;
     }
 }
