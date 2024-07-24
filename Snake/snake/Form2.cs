@@ -161,23 +161,47 @@ namespace snake
             {
                 case "Right":
                 case "D":
-                    DirX = 1;
-                    DirY = 0;
+                    if (score > 0 && snake[1].Location.X == snake[0].Location.X + 40)
+                    {
+                    }
+                    else
+                    {
+                        DirX = 1;
+                        DirY = 0;
+                    }
                     break;
                 case "Left":
                 case "A":
-                    DirX = -1;
-                    DirY = 0;
+                    if (score > 0 && snake[1].Location.X == snake[0].Location.X - 40)
+                    {
+                    }
+                    else
+                    {
+                        DirX = -1;
+                        DirY = 0;
+                    }
                     break;
                 case "Up":
                 case "W":
-                    DirY = -1;
-                    DirX = 0;
+                    if (score > 0 && snake[1].Location.Y == snake[0].Location.Y - 40)
+                    {
+                    }
+                    else
+                    {
+                        DirY = -1;
+                        DirX = 0;
+                    }
                     break;
                 case "Down":
                 case "S":
-                    DirY = 1;
-                    DirX = 0;
+                    if (score > 0 && snake[1].Location.Y == snake[0].Location.Y + 40)
+                    {
+                    }
+                    else
+                    {
+                        DirY = 1;
+                        DirX = 0;
+                    }
                     break;
             }
         }
