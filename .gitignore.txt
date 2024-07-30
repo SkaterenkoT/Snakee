@@ -1,0 +1,8 @@
+Snakee/
+v17/
+DesignTimeBuild/
+FileContentIndex/
+bin/
+obj/
+Properties/
+Resourses/

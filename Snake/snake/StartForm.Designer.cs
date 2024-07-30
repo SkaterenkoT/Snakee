@@ -1,6 +1,6 @@
 ﻿namespace snake
 {
-    partial class Form1
+    partial class StartForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,7 +31,7 @@
             Startbtn = new Button();
             label1 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            Quitbtn = new Button();
             pictureBox1 = new PictureBox();
             DimensionsBox = new ComboBox();
             DiffBox = new ComboBox();
@@ -67,16 +67,16 @@
             label2.TabIndex = 4;
             label2.Text = "Set difficulty:";
             // 
-            // button1
+            // Quitbtn
             // 
-            button1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            button1.Location = new Point(76, 293);
-            button1.Name = "button1";
-            button1.Size = new Size(156, 66);
-            button1.TabIndex = 6;
-            button1.Text = "Exit";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            Quitbtn.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            Quitbtn.Location = new Point(76, 293);
+            Quitbtn.Name = "Quitbtn";
+            Quitbtn.Size = new Size(156, 66);
+            Quitbtn.TabIndex = 6;
+            Quitbtn.Text = "Quit";
+            Quitbtn.UseVisualStyleBackColor = true;
+            Quitbtn.Click += Quitbtn_Click;
             // 
             // pictureBox1
             // 
@@ -105,20 +105,20 @@
             DiffBox.Size = new Size(151, 28);
             DiffBox.TabIndex = 9;
             // 
-            // Form1
+            // StartForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(513, 498);
             Controls.Add(DiffBox);
             Controls.Add(DimensionsBox);
-            Controls.Add(button1);
+            Controls.Add(Quitbtn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Startbtn);
             Controls.Add(pictureBox1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "StartForm";
+            Text = "SnakeGame";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -129,7 +129,7 @@
         private Button Startbtn;
         private Label label1;
         private Label label2;
-        private Button button1;
+        private Button Quitbtn;
         private PictureBox pictureBox1;
         private ComboBox DimensionsBox;
         private ComboBox DiffBox;

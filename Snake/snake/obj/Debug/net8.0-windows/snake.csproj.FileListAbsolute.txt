@@ -3,8 +3,6 @@ C:\Users\Админ\Snakee\Snake\snake\bin\Debug\net8.0-windows\snake.deps.json
 C:\Users\Админ\Snakee\Snake\snake\bin\Debug\net8.0-windows\snake.runtimeconfig.json
 C:\Users\Админ\Snakee\Snake\snake\bin\Debug\net8.0-windows\snake.dll
 C:\Users\Админ\Snakee\Snake\snake\bin\Debug\net8.0-windows\snake.pdb
-C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.Form1.resources
-C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.Form2.resources
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.csproj.GenerateResource.cache
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.AssemblyInfoInputs.cache
@@ -17,3 +15,5 @@ C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.pdb
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.genruntimeconfig.cache
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\ref\snake.dll
 C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.Properties.Resources.resources
+C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.StartForm.resources
+C:\Users\Админ\Snakee\Snake\snake\obj\Debug\net8.0-windows\snake.GameForm.resources

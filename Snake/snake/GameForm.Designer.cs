@@ -1,6 +1,6 @@
 ﻿namespace snake
 {
-    partial class Form2
+    partial class GameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,15 +44,15 @@
             Refreshbtn.UseVisualStyleBackColor = true;
             Refreshbtn.Click += Refreshbtn_Click;
             // 
-            // Form2
+            // GameForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(Refreshbtn);
             KeyPreview = true;
-            Name = "Form2";
-            Text = "Form2";
+            Name = "GameForm";
+            Text = "Snake";
             ResumeLayout(false);
         }
 
