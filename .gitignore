@@ -395,7 +395,8 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
-*.sln.imldesktop.ini
-C:\Users\Админ\Snakee\Snake\v17
-C:\Users\Админ\Snakee\Snake\FileContentIndex
-C:\Users\Админ\Snakee\Snake\DesignTimeBuild
+desktop.ini
+Snakee/
+v17/
+DesignTimeBuild/
+FileContentIndex/
