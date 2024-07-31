@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\fruitmechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\fruitmechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\fruitmechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\fruitmechanics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +25,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|solutionrelative:snake\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B24433F0-BE7F-4693-B793-C3803C586D05}|snake\\snake.csproj|c:\\users\\\u0430\u0434\u043C\u0438\u043D\\snakee\\snake\\snake\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -71,32 +71,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "StartForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\StartForm.cs",
               "RelativeDocumentMoniker": "snake\\StartForm.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\StartForm.cs [Design]",
               "RelativeToolTip": "snake\\StartForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T07:46:18.943Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-22T07:46:18.943Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameForm.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\GameForm.cs",
               "RelativeDocumentMoniker": "snake\\GameForm.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\GameForm.cs",
               "RelativeToolTip": "snake\\GameForm.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAawCYAAABJAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAQwEAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T07:58:11.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "GameForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\GameForm.cs",
               "RelativeDocumentMoniker": "snake\\GameForm.cs",
@@ -108,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "GameSettings.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\GameSettings.cs",
               "RelativeDocumentMoniker": "snake\\GameSettings.cs",
@@ -121,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\Map.cs",
               "RelativeDocumentMoniker": "snake\\Map.cs",
@@ -134,13 +133,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FruitMechanics.cs",
               "DocumentMoniker": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\FruitMechanics.cs",
               "RelativeDocumentMoniker": "snake\\FruitMechanics.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\FruitMechanics.cs",
               "RelativeToolTip": "snake\\FruitMechanics.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAgAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T08:25:56.86Z",
               "EditorCaption": ""
@@ -153,7 +152,7 @@
               "RelativeDocumentMoniker": "snake\\Movement.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\Movement.cs",
               "RelativeToolTip": "snake\\Movement.cs",
-              "ViewState": "AQIAAHwAAAAAAAAAAIAwwIUAAAAmAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAgwFYAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-30T08:47:18.991Z",
               "EditorCaption": ""
