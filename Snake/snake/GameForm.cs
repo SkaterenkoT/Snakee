@@ -24,13 +24,9 @@ namespace snake
             this.Width = GameSettings.width;
             this.Height = GameSettings.height + 100;
 
-            Movement.border1 = 0;
-            Movement.border2 = 0;
-            Movement.border3 = 0;
-            Movement.border4 = 0;
+            BorderMechanics.BorderCleaner();
 
-            FruitMechanics.Fruit.BackColor = Color.Yellow;
-            FruitMechanics.Fruit.Size = new Size(Map.SizeOfSides, Map.SizeOfSides);
+            FruitMechanics.Fruit = FruitMechanics.FruitCreation();
 
             Movement.DirX = 1;
             Movement.DirY = 0;
@@ -40,9 +36,9 @@ namespace snake
             LabelScore.Location = new Point(GameSettings.width - 99, 10);
 
             FruitMechanics.score = 0;
-            Movement.snake = Movement.SnakeCreation();
+            SnakeDefinition.snake = SnakeDefinition.SnakeCreation();
             this.Controls.Add(LabelScore);
-            this.Controls.Add(Movement.snake[0]);
+            this.Controls.Add(SnakeDefinition.snake[0]);
 
             Refreshbtn.Visible = false;
 
@@ -58,10 +54,10 @@ namespace snake
 
         private void FormUpdate(object sender, EventArgs e)
         {
-            Movement.ThroughTheBorderMovement();
-            FruitMechanics.EatFruit(this, Movement.snake, FruitMechanics.score, Movement.DirX, Movement.DirY);
+            BorderMechanics.CheckBorders();
+            FruitMechanics.EatFruit(this, SnakeDefinition.snake, FruitMechanics.score, Movement.DirX, Movement.DirY);
             Movement.TailMovement();
-            if (Movement.SelfStuck())
+            if (SelfEating.SelfStuck())
             {
                 timer.Stop();
                 Refreshbtn.BringToFront();

@@ -23,6 +23,7 @@ namespace snake
                 pic.Size = new Size(GameSettings.width - 100, 1);
                 formName.Controls.Add(pic);
             }
+
             for (int i = 0; i <= GameSettings.height / SizeOfSides; i++)
             {
                 PictureBox pic = new PictureBox();

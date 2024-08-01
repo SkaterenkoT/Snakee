@@ -17,6 +17,17 @@ namespace snake
 
         public static int score;
 
+        static public PictureBox FruitCreation()
+        {
+
+            PictureBox Fruit = new PictureBox();
+            Fruit.BackColor = Color.Yellow;
+            Fruit.Size = new Size(Map.SizeOfSides, Map.SizeOfSides);
+
+            return Fruit;
+
+        }
+
         static public void GenerateFruit(Form formName, PictureBox Fruit)
         {
             Random random = new Random();
