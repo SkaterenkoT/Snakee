@@ -55,7 +55,7 @@ namespace snake
         private void FormUpdate(object sender, EventArgs e)
         {
             BorderMechanics.CheckBorders();
-            FruitMechanics.EatFruit(this, SnakeDefinition.snake, FruitMechanics.score, Movement.DirX, Movement.DirY);
+            FruitMechanics.EatFruit(this);
             Movement.TailMovement();
             if (SelfEating.SelfStuck())
             {

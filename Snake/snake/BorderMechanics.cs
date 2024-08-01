@@ -9,10 +9,10 @@ namespace snake
     internal class BorderMechanics
     {
 
-        static public int border1 = 0;
-        static public int border2 = 0;
-        static public int border3 = 0;
-        static public int border4 = 0;
+        static public int border1 = 0; //
+        static public int border2 = 0; //
+        static public int border3 = 0; //
+        static public int border4 = 0; //
 
         static public void BorderCleaner()
         {

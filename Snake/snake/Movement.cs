@@ -9,8 +9,8 @@ namespace snake
 {
     internal class Movement
     {
-        static public int DirX;
-        static public int DirY;
+        static public int DirX; //
+        static public int DirY; //
 
         static public void TailMovement()
         {

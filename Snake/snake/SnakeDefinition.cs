@@ -9,7 +9,7 @@ namespace snake
     internal class SnakeDefinition
     {
 
-        public static PictureBox[] snake;
+        public static PictureBox[] snake; //
 
         static public PictureBox[] SnakeCreation()
         {

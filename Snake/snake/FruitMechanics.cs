@@ -11,11 +11,11 @@ namespace snake
     internal class FruitMechanics
     {
 
-        static private int RandI, RandJ;
+        static private int RandI, RandJ; //
 
-        static public PictureBox Fruit = new PictureBox();
+        static public PictureBox Fruit = new PictureBox(); //
 
-        public static int score;
+        public static int score; //
 
         static public PictureBox FruitCreation()
         {
@@ -41,16 +41,16 @@ namespace snake
             formName.Controls.Add(Fruit);
         }
 
-        static public void EatFruit(Form formName, PictureBox[] snake, int score, int DirX, int DirY)
+        static public void EatFruit(Form formName)
         {
-            if (snake[0].Location.X == RandI && snake[0].Location.Y == RandJ)
+            if (SnakeDefinition.snake[0].Location.X == RandI && SnakeDefinition.snake[0].Location.Y == RandJ)
             {
                 FruitMechanics.score += 1;
-                snake[FruitMechanics.score] = new PictureBox();
-                snake[FruitMechanics.score].Location = new Point(snake[FruitMechanics.score - 1].Location.X + 40 * DirX, snake[FruitMechanics.score - 1].Location.Y - 40 * DirY);
-                snake[FruitMechanics.score].Size = new Size(Map.SizeOfSides - 1, Map.SizeOfSides - 1);
-                snake[FruitMechanics.score].BackColor = Color.Green;
-                formName.Controls.Add(snake[FruitMechanics.score]);
+                SnakeDefinition.snake[FruitMechanics.score] = new PictureBox();
+                SnakeDefinition.snake[FruitMechanics.score].Location = new Point(SnakeDefinition.snake[FruitMechanics.score - 1].Location.X + 40 * Movement.DirX, SnakeDefinition.snake[FruitMechanics.score - 1].Location.Y - 40 * Movement.DirY);
+                SnakeDefinition.snake[FruitMechanics.score].Size = new Size(Map.SizeOfSides - 1, Map.SizeOfSides - 1);
+                SnakeDefinition.snake[FruitMechanics.score].BackColor = Color.Green;
+                formName.Controls.Add(SnakeDefinition.snake[FruitMechanics.score]);
                 GenerateFruit(formName, FruitMechanics.Fruit);
             }
         }

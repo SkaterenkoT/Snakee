@@ -10,7 +10,7 @@ namespace snake
     static class Map
     {
 
-        static public int SizeOfSides = 40;
+        static public int SizeOfSides = 40; //
 
         static public void GenerateMap(Form formName)
         {
