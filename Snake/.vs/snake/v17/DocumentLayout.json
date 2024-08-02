@@ -90,8 +90,7 @@
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\StartForm.cs [Design]",
               "RelativeToolTip": "snake\\StartForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T07:46:18.943Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-22T07:46:18.943Z"
             },
             {
               "$type": "Document",
@@ -101,7 +100,7 @@
               "RelativeDocumentMoniker": "snake\\GameForm.cs",
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\GameForm.cs",
               "RelativeToolTip": "snake\\GameForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T07:58:11.175Z",
               "EditorCaption": ""
@@ -115,8 +114,7 @@
               "ToolTip": "C:\\Users\\\u0410\u0434\u043C\u0438\u043D\\Snakee\\Snake\\snake\\GameForm.cs [Design]",
               "RelativeToolTip": "snake\\GameForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T07:53:27.8Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-22T07:53:27.8Z"
             },
             {
               "$type": "Document",
@@ -128,8 +126,7 @@
               "RelativeToolTip": "snake\\GameSettings.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T07:26:53.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T07:26:53.939Z"
             },
             {
               "$type": "Document",
@@ -141,8 +138,7 @@
               "RelativeToolTip": "snake\\Map.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T07:52:57.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T07:52:57.791Z"
             },
             {
               "$type": "Document",
@@ -154,8 +150,7 @@
               "RelativeToolTip": "snake\\FruitMechanics.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAADtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T08:25:56.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T08:25:56.86Z"
             },
             {
               "$type": "Document",
@@ -167,8 +162,7 @@
               "RelativeToolTip": "snake\\Movement.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-30T08:47:18.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-30T08:47:18.991Z"
             },
             {
               "$type": "Document",
@@ -180,8 +174,7 @@
               "RelativeToolTip": "snake\\SnakeDefinition.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T08:11:12.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T08:11:12.938Z"
             },
             {
               "$type": "Document",
@@ -193,8 +186,7 @@
               "RelativeToolTip": "snake\\BorderMechanics.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:01:18.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T09:01:18.898Z"
             },
             {
               "$type": "Document",
@@ -206,8 +198,7 @@
               "RelativeToolTip": "snake\\SelfEating.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:54:05.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T09:54:05.234Z"
             }
           ]
         }
