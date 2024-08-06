@@ -11,48 +11,48 @@ namespace snake
     internal class FruitMechanics
     {
 
-        static private int RandI, RandJ; //
-
-        static public PictureBox Fruit = new PictureBox(); //
-
-        public static int score; //
-
-        static public PictureBox FruitCreation()
+        private PictureBox Fruit = new PictureBox();
+        private int Height;
+        private int Width;
+        private int RandI;
+        private int RandJ;
+        public FruitMechanics(int height, int width)
         {
-
-            PictureBox Fruit = new PictureBox();
-            Fruit.BackColor = Color.Yellow;
-            Fruit.Size = new Size(Map.SizeOfSides, Map.SizeOfSides);
-
-            return Fruit;
-
+            Height = height;
+            Width = width;
         }
 
-        static public void GenerateFruit(Form formName, PictureBox Fruit)
+        private void FruitLocation(int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
         {
             Random random = new Random();
-            RandI = random.Next(0, GameSettings.height - Map.SizeOfSides);
-            int tempI = RandI % Map.SizeOfSides;
+            RandI = random.Next(startCoordX, startCoordX + Height - SizeOfSides);
+            int tempI = RandI % SizeOfSides;
             RandI -= tempI;
-            RandJ = random.Next(0, GameSettings.height - Map.SizeOfSides);
-            int tempJ = RandJ % Map.SizeOfSides;
+            RandJ = random.Next(startCoordY, startCoordY + Width - SizeOfSides);
+            int tempJ = RandJ % SizeOfSides;
             RandJ -= tempJ;
+        }
+        public void AddFruit(Form formName, int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
+        {
+            Fruit.BackColor = Color.Yellow;
+            Fruit.Size = new Size(SizeOfSides, SizeOfSides);
+            FruitLocation(startCoordX, startCoordY, SizeOfSides);
             Fruit.Location = new Point(RandI, RandJ);
             formName.Controls.Add(Fruit);
         }
-
-        static public void EatFruit(Form formName)
+        public void EatFruit(List<PictureBox> snake, Form formName, int[] Dirs, int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
         {
-            if (SnakeDefinition.snake[0].Location.X == RandI && SnakeDefinition.snake[0].Location.Y == RandJ)
+            if (snake[0].Location.X == RandI && snake[0].Location.Y == RandJ)
             {
-                FruitMechanics.score += 1;
-                SnakeDefinition.snake[FruitMechanics.score] = new PictureBox();
-                SnakeDefinition.snake[FruitMechanics.score].Location = new Point(SnakeDefinition.snake[FruitMechanics.score - 1].Location.X + 40 * Movement.DirX, SnakeDefinition.snake[FruitMechanics.score - 1].Location.Y - 40 * Movement.DirY);
-                SnakeDefinition.snake[FruitMechanics.score].Size = new Size(Map.SizeOfSides - 1, Map.SizeOfSides - 1);
-                SnakeDefinition.snake[FruitMechanics.score].BackColor = Color.Green;
-                formName.Controls.Add(SnakeDefinition.snake[FruitMechanics.score]);
-                GenerateFruit(formName, FruitMechanics.Fruit);
+                PictureBox segment = new PictureBox();
+                segment.Location = new Point(snake[snake.Count - 1].Location.X + 40 * Dirs[0], snake[snake.Count - 1].Location.Y - 40 * Dirs[1]);
+                segment.Size = new Size(SizeOfSides - 1, SizeOfSides - 1);
+                segment.BackColor = Color.Green;
+                snake.Add(segment);
+                formName.Controls.Add(segment);
+                AddFruit(formName, startCoordX, startCoordY);
             }
+
         }
 
     }

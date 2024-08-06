@@ -6,63 +6,48 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    internal class BorderMechanics
+    internal class Borders
     {
-
-        static public int border1 = 0; //
-        static public int border2 = 0; //
-        static public int border3 = 0; //
-        static public int border4 = 0; //
-
-        static public void BorderCleaner()
+        private int Height;
+        private int Width;
+        public Borders(int width, int height)
         {
-
-            border1 = 0;
-            border2 = 0;
-            border3 = 0;
-            border4 = 0;
-        
+            Height = height;
+            Width = width;
         }
-
-        static public void CheckBorders()
+        private int[] CheckBorders(int LocX, int LocY, int startCoordX = 0, int startCoordY = 0)
         {
-            if (SnakeDefinition.snake[border1].Location.X < 0 && border1 - 1 <= FruitMechanics.score)
+            if (LocX < startCoordX)
             {
-                SnakeDefinition.snake[border1].Location = new Point(GameSettings.width - 140, SnakeDefinition.snake[0].Location.Y);
-                if (border1 == SnakeDefinition.snake.Length)
-                {
-                    border1 += 1;
-                }
+                return new int[] { startCoordX + Width - 40, startCoordY + LocY };
             }
-            else { border1 = 0; }
-            if (SnakeDefinition.snake[border2].Location.X > GameSettings.width - 140 && border2 - 1 <= FruitMechanics.score)
+            else if (LocX > startCoordX + Width - 40)
             {
-                SnakeDefinition.snake[border2].Location = new Point(0, SnakeDefinition.snake[0].Location.Y);
-                if (border2 == SnakeDefinition.snake.Length)
-                {
-                    border2 += 1;
-                }
+                return new int[] { startCoordX, startCoordY + LocY };
             }
-            else { border2 = 0; }
-            if (SnakeDefinition.snake[border3].Location.Y < 0 && border3 - 1 <= FruitMechanics.score)
+            else if (LocY < startCoordY)
             {
-                SnakeDefinition.snake[border3].Location = new Point(SnakeDefinition.snake[0].Location.X, GameSettings.height);
-                if (border3 == SnakeDefinition.snake.Length)
-                {
-                    border3 += 1;
-                }
+                return new int[] { startCoordX + LocX, startCoordY + Height - 40 };
             }
-            else { border3 = 0; }
-            if (SnakeDefinition.snake[border4].Location.Y > GameSettings.height && border4 - 1 <= FruitMechanics.score)
+            else if (LocY > startCoordY + Height - 40)
             {
-                SnakeDefinition.snake[border4].Location = new Point(SnakeDefinition.snake[0].Location.X, 0);
-                if (border4 == SnakeDefinition.snake.Length)
-                {
-                    border4 += 1;
-                }
+                return new int[] { startCoordX + LocX, startCoordY };
             }
-            else { border4 = 0; }
+            else
+            {
+                return new int[] { };
+            }
         }
-
+        public void ThroughBorder(List<PictureBox> model, int startCoordX = 0, int startCoordY = 0)
+        {
+            foreach (PictureBox segment in model)
+            {
+                int[] newCoords = CheckBorders(Convert.ToInt32(segment.Location.X), Convert.ToInt32(segment.Location.Y), startCoordX, startCoordY);
+                if (!newCoords.SequenceEqual(Array.Empty<int>()))
+                {
+                    segment.Location = new Point(newCoords[0], newCoords[1]);
+                }
+            }
+        }
     }
 }

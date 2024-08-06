@@ -90,7 +90,7 @@
             // DimensionsBox
             // 
             DimensionsBox.FormattingEnabled = true;
-            DimensionsBox.Items.AddRange(new object[] { "1000x1100", "800x900", "600x700", "400x500" });
+            DimensionsBox.Items.AddRange(new object[] { "960x960", "800x800", "520x520", "440x440" });
             DimensionsBox.Location = new Point(261, 262);
             DimensionsBox.Name = "DimensionsBox";
             DimensionsBox.Size = new Size(151, 28);

@@ -11,21 +11,21 @@ namespace snake
         {
             switch (DimensionsBox.Text)
             {
-                case "1000x1100":
-                    GameSettings.height = 1000;
-                    GameSettings.width = 1100;
+                case "960x960":
+                    GameSettings.height = 960;
+                    GameSettings.width = 960;
                     break;
-                case "800x900":
+                case "800x800":
                     GameSettings.height = 800;
-                    GameSettings.width = 900;
+                    GameSettings.width = 800;
                     break;
-                case "600x700":
-                    GameSettings.height = 600;
-                    GameSettings.width = 700;
+                case "520x520":
+                    GameSettings.height = 520;
+                    GameSettings.width = 520;
                     break;
-                case "400x500":
-                    GameSettings.height = 400;
-                    GameSettings.width = 500;
+                case "440x440":
+                    GameSettings.height = 440;
+                    GameSettings.width = 440;
                     break;
                 default:
                     break;
