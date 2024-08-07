@@ -35,6 +35,8 @@
             pictureBox1 = new PictureBox();
             DimensionsBox = new ComboBox();
             DiffBox = new ComboBox();
+            label3 = new Label();
+            BorderBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(238, 239);
+            label1.Location = new Point(238, 217);
             label1.Name = "label1";
             label1.Size = new Size(146, 20);
             label1.TabIndex = 1;
@@ -61,7 +63,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(238, 293);
+            label2.Location = new Point(238, 271);
             label2.Name = "label2";
             label2.Size = new Size(95, 20);
             label2.TabIndex = 4;
@@ -83,7 +85,7 @@
             pictureBox1.Image = Properties.Resources.Snake_free_icons_designed_by_Freepik;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(513, 498);
+            pictureBox1.Size = new Size(512, 498);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
@@ -91,25 +93,45 @@
             // 
             DimensionsBox.FormattingEnabled = true;
             DimensionsBox.Items.AddRange(new object[] { "960x960", "800x800", "520x520", "440x440" });
-            DimensionsBox.Location = new Point(261, 262);
+            DimensionsBox.Location = new Point(261, 240);
             DimensionsBox.Name = "DimensionsBox";
-            DimensionsBox.Size = new Size(151, 28);
+            DimensionsBox.Size = new Size(168, 28);
             DimensionsBox.TabIndex = 8;
             // 
             // DiffBox
             // 
             DiffBox.FormattingEnabled = true;
             DiffBox.Items.AddRange(new object[] { "Easy", "Normal", "Hard" });
-            DiffBox.Location = new Point(261, 316);
+            DiffBox.Location = new Point(261, 294);
             DiffBox.Name = "DiffBox";
-            DiffBox.Size = new Size(151, 28);
+            DiffBox.Size = new Size(168, 28);
             DiffBox.TabIndex = 9;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(238, 325);
+            label3.Name = "label3";
+            label3.Size = new Size(116, 20);
+            label3.TabIndex = 10;
+            label3.Text = "Set border style:";
+            // 
+            // BorderBox
+            // 
+            BorderBox.FormattingEnabled = true;
+            BorderBox.Items.AddRange(new object[] { "Move through", "Unable to move through" });
+            BorderBox.Location = new Point(261, 348);
+            BorderBox.Name = "BorderBox";
+            BorderBox.Size = new Size(168, 28);
+            BorderBox.TabIndex = 11;
             // 
             // StartForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(513, 498);
+            Controls.Add(BorderBox);
+            Controls.Add(label3);
             Controls.Add(DiffBox);
             Controls.Add(DimensionsBox);
             Controls.Add(Quitbtn);
@@ -133,5 +155,7 @@
         private PictureBox pictureBox1;
         private ComboBox DimensionsBox;
         private ComboBox DiffBox;
+        private Label label3;
+        private ComboBox BorderBox;
     }
 }

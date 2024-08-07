@@ -15,5 +15,7 @@ namespace snake
 
         static public int difficulty { get; set; } = 100;
 
+        static public bool possibleMove { get; set; } = true;
+
     }
 }

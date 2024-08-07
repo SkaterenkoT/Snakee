@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    internal class SnakeDefinition // only snake
+    internal class SnakeDefinition
     {
 
         private List<PictureBox> Snake;

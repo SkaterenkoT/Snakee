@@ -44,7 +44,21 @@ namespace snake
             Map map = new Map(GameSettings.width, GameSettings.height);
             map.GenerateMap(this);
 
-            timer.Tick += (sender, e) => borders.ThroughBorder(Snake);
+            if (GameSettings.possibleMove == true)
+            {
+                timer.Tick += (sender, e) => borders.ThroughBorder(Snake);
+            }
+            else
+            {
+                timer.Tick += (sender, e) =>
+                {
+                    if (borders.BorderStuck(Snake[0]))
+                    {
+                        timer.Stop();
+                        Refreshbtn.Visible = true;
+                    }
+                };
+            }
 
             timer.Tick += Move.MoveSnake;
 

@@ -45,12 +45,12 @@ namespace snake
             if (snake[0].Location.X == RandI && snake[0].Location.Y == RandJ)
             {
                 PictureBox segment = new PictureBox();
-                segment.Location = new Point(snake[snake.Count - 1].Location.X + 40 * Dirs[0], snake[snake.Count - 1].Location.Y - 40 * Dirs[1]);
+                segment.Location = new Point(snake[snake.Count - 1].Location.X + SizeOfSides * Dirs[0], snake[snake.Count - 1].Location.Y - SizeOfSides * Dirs[1]);
                 segment.Size = new Size(SizeOfSides - 1, SizeOfSides - 1);
                 segment.BackColor = Color.Green;
                 snake.Add(segment);
                 formName.Controls.Add(segment);
-                AddFruit(formName, startCoordX, startCoordY);
+                AddFruit(formName, startCoordX, startCoordY, SizeOfSides);
             }
 
         }

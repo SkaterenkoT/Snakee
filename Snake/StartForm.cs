@@ -44,6 +44,15 @@ namespace snake
                 default:
                     break;
             }
+            switch (BorderBox.Text)
+            {
+                case "Move through":
+                    GameSettings.possibleMove = true;
+                    break;
+                case "Unable to move through":
+                    GameSettings.possibleMove = false;
+                    break;
+            }
             this.Hide();
             GameForm form2 = new GameForm();
             form2.Show();

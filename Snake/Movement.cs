@@ -12,14 +12,16 @@ namespace snake
         private List<PictureBox> snake;
         private int dx = 1;
         private int dy = 0;
+        private int SizeOfSides;
         private Keys ToUp = Keys.W;
         private Keys ToDown = Keys.S;
         private Keys ToLeft = Keys.A;
         private Keys ToRight = Keys.D;
 
-        public Movement(List<PictureBox> snake)
+        public Movement(List<PictureBox> snake, int sizeOfSides = 40)
         {
             this.snake = snake;
+            SizeOfSides = sizeOfSides;
         }
         public void ChangeMoveSettings(Keys toUp, Keys toDown, Keys toLeft, Keys toRight)
         {
@@ -31,22 +33,22 @@ namespace snake
 
         public void Direction(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == ToUp && ((snake.Count > 1 && snake[0].Location.Y != snake[1].Location.Y + 40) || snake.Count == 1))
+            if (e.KeyCode == ToUp && ((snake.Count > 1 && snake[0].Location.Y != snake[1].Location.Y + SizeOfSides) || snake.Count == 1))
             {
                 dx = 0;
                 dy = -1;
             }
-            else if (e.KeyCode == ToDown && ((snake.Count > 1 && snake[0].Location.Y != snake[1].Location.Y - 40) || snake.Count == 1))
+            else if (e.KeyCode == ToDown && ((snake.Count > 1 && snake[0].Location.Y != snake[1].Location.Y - SizeOfSides) || snake.Count == 1))
             {
                 dx = 0;
                 dy = 1;
             }
-            else if (e.KeyCode == ToLeft && ((snake.Count > 1 && snake[0].Location.X != snake[1].Location.X + 40) || snake.Count == 1))
+            else if (e.KeyCode == ToLeft && ((snake.Count > 1 && snake[0].Location.X != snake[1].Location.X + SizeOfSides) || snake.Count == 1))
             {
                 dx = -1;
                 dy = 0;
             }
-            else if (e.KeyCode == ToRight && ((snake.Count > 1 && snake[0].Location.X != snake[1].Location.X - 40) || snake.Count == 1))
+            else if (e.KeyCode == ToRight && ((snake.Count > 1 && snake[0].Location.X != snake[1].Location.X - SizeOfSides) || snake.Count == 1))
             {
                 dx = 1;
                 dy = 0;
@@ -55,7 +57,6 @@ namespace snake
 
         public void MoveSnake(object sender, EventArgs e)
         {
-            int SizeOfSides = 40;
             for (int i = snake.Count - 1; i >= 1; i--)
             {
                 snake[i].Location = snake[i - 1].Location;
