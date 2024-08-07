@@ -32,14 +32,14 @@ namespace snake
             }
             switch (DiffBox.Text)
             {
-                case "Easy":
-                    GameSettings.difficulty = 250;
+                case "Slow":
+                    GameSettings.speed = 200;
                     break;
                 case "Normal":
-                    GameSettings.difficulty = 100;
+                    GameSettings.speed = 100;
                     break;
-                case "Hard":
-                    GameSettings.difficulty = 60;
+                case "Fast":
+                    GameSettings.speed = 60;
                     break;
                 default:
                     break;
@@ -51,6 +51,18 @@ namespace snake
                     break;
                 case "Unable to move through":
                     GameSettings.possibleMove = false;
+                    break;
+            }
+            switch (SizeBox.Text)
+            {
+                case "40 px":
+                    GameSettings.sizeOfSides = 40;
+                    break;
+                case "20 px":
+                    GameSettings.sizeOfSides = 20;
+                    break;
+                case "10 px":
+                    GameSettings.sizeOfSides = 10; 
                     break;
             }
             this.Hide();

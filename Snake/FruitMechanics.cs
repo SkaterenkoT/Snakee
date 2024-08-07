@@ -34,18 +34,18 @@ namespace snake
         }
         public void AddFruit(Form formName, int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
         {
-            Fruit.BackColor = Color.Yellow;
+            Fruit.BackColor = Color.LightYellow;
             Fruit.Size = new Size(SizeOfSides, SizeOfSides);
             FruitLocation(startCoordX, startCoordY, SizeOfSides);
             Fruit.Location = new Point(RandI, RandJ);
             formName.Controls.Add(Fruit);
         }
-        public void EatFruit(List<PictureBox> snake, Form formName, int[] Dirs, int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
+        public void EatFruit(List<PictureBox> snake, Form formName, int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
         {
             if (snake[0].Location.X == RandI && snake[0].Location.Y == RandJ)
             {
                 PictureBox segment = new PictureBox();
-                segment.Location = new Point(snake[snake.Count - 1].Location.X + SizeOfSides * Dirs[0], snake[snake.Count - 1].Location.Y - SizeOfSides * Dirs[1]);
+                segment.Location = new Point(snake[snake.Count - 1].Location.X, snake[snake.Count - 1].Location.Y);
                 segment.Size = new Size(SizeOfSides - 1, SizeOfSides - 1);
                 segment.BackColor = Color.Green;
                 snake.Add(segment);

@@ -63,9 +63,5 @@ namespace snake
             }
             snake[0].Location = new Point(snake[0].Location.X + dx * SizeOfSides, snake[0].Location.Y + dy * SizeOfSides);
         }
-        public int[] ReturnDirs()
-        {
-            return new int[] { dx, dy };
-        }
     }
 }
