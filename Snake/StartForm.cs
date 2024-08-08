@@ -11,37 +11,58 @@ namespace snake
         {
             switch (DimensionsBox.Text)
             {
-                case "1000x1100":
-                    GameSettings.height = 1000;
-                    GameSettings.width = 1100;
+                case "960x960":
+                    GameSettings.height = 960;
+                    GameSettings.width = 960;
                     break;
-                case "800x900":
+                case "800x800":
                     GameSettings.height = 800;
-                    GameSettings.width = 900;
+                    GameSettings.width = 800;
                     break;
-                case "600x700":
-                    GameSettings.height = 600;
-                    GameSettings.width = 700;
+                case "520x520":
+                    GameSettings.height = 520;
+                    GameSettings.width = 520;
                     break;
-                case "400x500":
-                    GameSettings.height = 400;
-                    GameSettings.width = 500;
+                case "440x440":
+                    GameSettings.height = 440;
+                    GameSettings.width = 440;
                     break;
                 default:
                     break;
             }
             switch (DiffBox.Text)
             {
-                case "Easy":
-                    GameSettings.difficulty = 250;
+                case "Slow":
+                    GameSettings.speed = 200;
                     break;
                 case "Normal":
-                    GameSettings.difficulty = 100;
+                    GameSettings.speed = 100;
                     break;
-                case "Hard":
-                    GameSettings.difficulty = 60;
+                case "Fast":
+                    GameSettings.speed = 60;
                     break;
                 default:
+                    break;
+            }
+            switch (BorderBox.Text)
+            {
+                case "Move through":
+                    GameSettings.possibleMove = true;
+                    break;
+                case "Unable to move through":
+                    GameSettings.possibleMove = false;
+                    break;
+            }
+            switch (SizeBox.Text)
+            {
+                case "40 px":
+                    GameSettings.sizeOfSides = 40;
+                    break;
+                case "20 px":
+                    GameSettings.sizeOfSides = 20;
+                    break;
+                case "10 px":
+                    GameSettings.sizeOfSides = 10; 
                     break;
             }
             this.Hide();

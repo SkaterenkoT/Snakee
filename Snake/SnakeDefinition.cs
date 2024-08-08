@@ -9,16 +9,19 @@ namespace snake
     internal class SnakeDefinition
     {
 
-        public static PictureBox[] snake; //
-
-        static public PictureBox[] SnakeCreation()
+        private List<PictureBox> Snake;
+        public SnakeDefinition(List<PictureBox> snake)
+        {
+            Snake = snake;
+        }
+        public PictureBox Head(int startCoordX = 200, int startCoordY = 200, int SizeOfSides = 40)
         {
 
-            PictureBox[] snake = new PictureBox[400];
-            snake[0] = new PictureBox();
-            snake[0].Location = new Point(200, 200);
-            snake[0].Size = new Size(Map.SizeOfSides, Map.SizeOfSides);
-            snake[0].BackColor = Color.Red;
+            PictureBox snake = new PictureBox();
+            snake = new PictureBox();
+            snake.Location = new Point(startCoordX, startCoordY);
+            snake.Size = new Size(SizeOfSides, SizeOfSides);
+            snake.BackColor = Color.Red;
             return snake;
 
         }

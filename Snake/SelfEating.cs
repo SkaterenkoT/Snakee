@@ -8,18 +8,26 @@ namespace snake
 {
     internal class SelfEating
     {
-
-        static public bool SelfStuck()
+        private List<PictureBox> Snake;
+        public SelfEating(List<PictureBox> snake)
         {
-            for (int i = 1; i <= FruitMechanics.score; i++)
+            Snake = snake;
+        }
+
+        public bool SelfStuck()
+        {
+            if (Snake.Count > 4)
             {
-                if (SnakeDefinition.snake[0].Location == SnakeDefinition.snake[i].Location)
+                for (int i = 1; i <= Snake.Count - 1; i++)
                 {
-                    return true;
+                    if (Snake[0].Location == Snake[i].Location)
+                    {
+                        return true;
+                    }
                 }
+                return false;
             }
             return false;
         }
-
     }
 }

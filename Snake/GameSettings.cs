@@ -9,11 +9,15 @@ namespace snake
     internal class GameSettings
     {
 
-        static public int height { get; set; } = 800; //
+        static public int height { get; set; } = 800;
 
-        static public int width { get; set; } = 900; //
+        static public int width { get; set; } = 800;
 
-        static public int difficulty { get; set; } = 100; //
+        static public int speed { get; set; } = 100;
+
+        static public bool possibleMove { get; set; } = true;
+
+        static public int sizeOfSides { get; set; } = 40;
 
     }
 }

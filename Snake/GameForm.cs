@@ -14,59 +14,75 @@ namespace snake
 {
     public partial class GameForm : Form
     {
-
-        private Label LabelScore;
-
         public GameForm()
         {
             InitializeComponent();
 
-            this.Width = GameSettings.width;
-            this.Height = GameSettings.height + 100;
-
-            BorderMechanics.BorderCleaner();
-
-            FruitMechanics.Fruit = FruitMechanics.FruitCreation();
-
-            Movement.DirX = 1;
-            Movement.DirY = 0;
-
-            LabelScore = new Label();
-            LabelScore.Text = "Score: " + Convert.ToString(FruitMechanics.score);
-            LabelScore.Location = new Point(GameSettings.width - 99, 10);
-
-            FruitMechanics.score = 0;
-            SnakeDefinition.snake = SnakeDefinition.SnakeCreation();
-            this.Controls.Add(LabelScore);
-            this.Controls.Add(SnakeDefinition.snake[0]);
-
+            int ExtraSize = 99;
+            this.Width = GameSettings.width + ExtraSize;
+            this.Height = GameSettings.height + ExtraSize;
             Refreshbtn.Visible = false;
+            Label labelScore = new Label();
+            labelScore.Text = "Score: 0";
+            labelScore.Location = new Point(GameSettings.width + 1, 10);
+            this.Controls.Add(labelScore);
 
-            Map.GenerateMap(this);
-            FruitMechanics.GenerateFruit(this, FruitMechanics.Fruit);
+            FruitMechanics fruit = new FruitMechanics(GameSettings.width, GameSettings.height);
+            fruit.AddFruit(this, SizeOfSides : GameSettings.sizeOfSides);
 
-            timer.Tick += new EventHandler(FormUpdate);
-            timer.Interval = GameSettings.difficulty;
-            timer.Start();
+            List<PictureBox> Snake = new List<PictureBox>();
+            SnakeDefinition ssnake = new SnakeDefinition(Snake);
+            Snake.Add(ssnake.Head(SizeOfSides: GameSettings.sizeOfSides));
+            this.Controls.Add(Snake[0]);
 
-            this.KeyDown += new KeyEventHandler(Movement.HeadMovement);
-        }
+            Borders borders = new Borders(GameSettings.width, GameSettings.height);
 
-        private void FormUpdate(object sender, EventArgs e)
-        {
-            BorderMechanics.CheckBorders();
-            FruitMechanics.EatFruit(this);
-            Movement.TailMovement();
-            if (SelfEating.SelfStuck())
+            Movement Move = new Movement(Snake, sizeOfSides: GameSettings.sizeOfSides);
+
+            SelfEating self = new SelfEating(Snake);
+
+            Map map = new Map(GameSettings.width, GameSettings.height);
+            map.GenerateMap(this, SizeOfSides: GameSettings.sizeOfSides);
+
+            if (GameSettings.possibleMove == true)
             {
-                timer.Stop();
-                Refreshbtn.BringToFront();
-                Refreshbtn.Visible = true;
-                Refreshbtn.Enabled = true;
+                timer.Tick += (sender, e) => borders.ThroughBorder(Snake, SizeOfSides: GameSettings.sizeOfSides);
             }
-            LabelScore.Text = "Score: " + FruitMechanics.score;
-        }
+            else
+            {
+                timer.Tick += (sender, e) =>
+                {
+                    if (borders.BorderStuck(Snake[0], SizeOfSides: GameSettings.sizeOfSides))
+                    {
+                        timer.Stop();
+                        Refreshbtn.Visible = true;
+                    }
+                };
+            }
 
+            timer.Tick += Move.MoveSnake;
+
+            timer.Tick += (sender, e) => fruit.EatFruit(Snake, this, SizeOfSides: GameSettings.sizeOfSides);
+
+            timer.Tick += (sender, e) => Score(labelScore, Snake.Count - 1);
+
+            this.KeyDown += Move.Direction;
+
+            timer.Interval = GameSettings.speed;
+            timer.Start();
+            timer.Tick += (sender, e) =>
+            {
+                if (self.SelfStuck())
+                {
+                    timer.Stop();
+                    Refreshbtn.Visible = true;
+                }
+            };
+        }
+        public void Score(Label label, int Lenght)
+        {
+            label.Text = "Score: " + Lenght.ToString();
+        }
         private void Refreshbtn_Click(object sender, EventArgs e)
         {
             this.Hide();

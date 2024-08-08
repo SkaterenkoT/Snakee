@@ -7,72 +7,61 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace snake
 {
-    internal class Movement
+    public class Movement
     {
-        static public int DirX; //
-        static public int DirY; //
+        private List<PictureBox> snake;
+        private int dx = 1;
+        private int dy = 0;
+        private int SizeOfSides;
+        private Keys ToUp = Keys.W;
+        private Keys ToDown = Keys.S;
+        private Keys ToLeft = Keys.A;
+        private Keys ToRight = Keys.D;
 
-        static public void TailMovement()
+        public Movement(List<PictureBox> snake, int sizeOfSides = 40)
         {
-            for (int i = FruitMechanics.score; i >= 1; i--)
-            {
-                SnakeDefinition.snake[i].Location = SnakeDefinition.snake[i - 1].Location;
-            }
-            SnakeDefinition.snake[0].Location = new Point(SnakeDefinition.snake[0].Location.X + DirX * Map.SizeOfSides, SnakeDefinition.snake[0].Location.Y + DirY * Map.SizeOfSides);
-
+            this.snake = snake;
+            SizeOfSides = sizeOfSides;
+        }
+        public void ChangeMoveSettings(Keys toUp, Keys toDown, Keys toLeft, Keys toRight)
+        {
+            ToUp = toUp;
+            ToDown = toDown;
+            ToLeft = toLeft;
+            ToRight = toRight;
         }
 
-        static public void HeadMovement(object sender, KeyEventArgs e) 
-
+        public void Direction(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode.ToString())
+            if (e.KeyCode == ToUp && ((snake.Count > 1 && snake[0].Location.Y != snake[1].Location.Y + SizeOfSides) || snake.Count == 1))
             {
-                case "Right":
-                case "D":
-                    if (FruitMechanics.score > 0 && SnakeDefinition.snake[1].Location.X == SnakeDefinition.snake[0].Location.X + 40)
-                    {
-                    }
-                    else
-                    {
-                        Movement.DirX = 1;
-                        Movement.DirY = 0;
-                    }
-                    break;
-                case "Left":
-                case "A":
-                    if (FruitMechanics.score > 0 && SnakeDefinition.snake[1].Location.X == SnakeDefinition.snake[0].Location.X - 40)
-                    {
-                    }
-                    else
-                    {
-                        Movement.DirX = -1;
-                        Movement.DirY = 0;
-                    }
-                    break;
-                case "Up":
-                case "W":
-                    if (FruitMechanics.score > 0 && SnakeDefinition.snake[1].Location.Y == SnakeDefinition.snake[0].Location.Y - 40)
-                    {
-                    }
-                    else
-                    {
-                        Movement.DirY = -1;
-                        Movement.DirX = 0;
-                    }
-                    break;
-                case "Down":
-                case "S":
-                    if (FruitMechanics.score > 0 && SnakeDefinition.snake[1].Location.Y == SnakeDefinition.snake[0].Location.Y + 40)
-                    {
-                    }
-                    else
-                    {
-                        Movement.DirY = 1;
-                        Movement.DirX = 0;
-                    }
-                    break;
+                dx = 0;
+                dy = -1;
             }
+            else if (e.KeyCode == ToDown && ((snake.Count > 1 && snake[0].Location.Y != snake[1].Location.Y - SizeOfSides) || snake.Count == 1))
+            {
+                dx = 0;
+                dy = 1;
+            }
+            else if (e.KeyCode == ToLeft && ((snake.Count > 1 && snake[0].Location.X != snake[1].Location.X + SizeOfSides) || snake.Count == 1))
+            {
+                dx = -1;
+                dy = 0;
+            }
+            else if (e.KeyCode == ToRight && ((snake.Count > 1 && snake[0].Location.X != snake[1].Location.X - SizeOfSides) || snake.Count == 1))
+            {
+                dx = 1;
+                dy = 0;
+            }
+        }
 
+        public void MoveSnake(object sender, EventArgs e)
+        {
+            for (int i = snake.Count - 1; i >= 1; i--)
+            {
+                snake[i].Location = snake[i - 1].Location;
+            }
+            snake[0].Location = new Point(snake[0].Location.X + dx * SizeOfSides, snake[0].Location.Y + dy * SizeOfSides);
         }
     }
 }
