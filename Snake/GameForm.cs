@@ -28,7 +28,7 @@ namespace snake
             this.Controls.Add(labelScore);
 
             FruitMechanics fruit = new FruitMechanics(GameSettings.width, GameSettings.height);
-            fruit.AddFruit(this, SizeOfSides : GameSettings.sizeOfSides);
+            fruit.AddFruit(this, SizeOfSides: GameSettings.sizeOfSides);
 
             List<PictureBox> Snake = new List<PictureBox>();
             SnakeDefinition ssnake = new SnakeDefinition(Snake);

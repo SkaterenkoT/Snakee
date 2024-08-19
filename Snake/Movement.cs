@@ -13,10 +13,10 @@ namespace snake
         private int dx = 1;
         private int dy = 0;
         private int SizeOfSides;
-        private Keys ToUp = Keys.W;
-        private Keys ToDown = Keys.S;
-        private Keys ToLeft = Keys.A;
-        private Keys ToRight = Keys.D;
+        private Keys ToUp = Keys.Up;
+        private Keys ToDown = Keys.Down;
+        private Keys ToLeft = Keys.Left;
+        private Keys ToRight = Keys.Right;
 
         public Movement(List<PictureBox> snake, int sizeOfSides = 40)
         {

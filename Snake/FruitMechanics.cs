@@ -34,7 +34,7 @@ namespace snake
         }
         public void AddFruit(Form formName, int startCoordX = 0, int startCoordY = 0, int SizeOfSides = 40)
         {
-            Fruit.BackColor = Color.LightYellow;
+            Fruit.BackColor = Color.Yellow;
             Fruit.Size = new Size(SizeOfSides, SizeOfSides);
             FruitLocation(startCoordX, startCoordY, SizeOfSides);
             Fruit.Location = new Point(RandI, RandJ);
